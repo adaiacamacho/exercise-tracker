@@ -46,7 +46,7 @@ app.get('/api/users/:id/logs',function(req,res){
     result=result.filter(l => new Date(l.date) >= new Date(from));
   }
   if(to){
-    result=result.filter(l => new Date(l.date) <= new Date(from))
+    result=result.filter(l => new Date(l.date) <= new Date(to))
   }
   if(limit){
     result=result.slice(0,Number(limit));
